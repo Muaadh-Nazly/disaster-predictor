@@ -21,6 +21,37 @@ The project consists of four main components:
 3. **API Integration** - Backend service for predictions
 4. **Mobile Application** - Android app for end users
 
+## 🎬 Demo
+
+### 📱 Full System Demo
+> End-to-end walkthrough of the Android app - user login, location-based disaster prediction, and real-time early warning alerts.
+
+[▶️ Watch Full Demo Video](https://github.com/Muaadh-Nazly/disaster-predictor/blob/main/Recorded%20Video/presentationVideo.mp4)
+
+---
+
+### 🌐 Live API Response
+> Real prediction output from the Flask REST API across all three disaster types with a 3-day forecast horizon.
+
+```bash
+curl -X POST http://127.0.0.1:5000/predict_three \
+  -F "Location=Kegalle" \
+  -F "District=Colombo" \
+  -F "Rainfall(mm)=30.0" \
+  -F "Wind Speed(mph)=20.0"
+```
+
+```json
+{
+  "Prediction for Cyclone RFR": 43.86,
+  "Prediction for Cyclone XGB": 39.80,
+  "Prediction for Flood RFR": 38.09,
+  "Prediction for Flood XGB": 24.23,
+  "Prediction for Landslide RFR": 54.43,
+  "Prediction for Landslide XGB": 86.63
+}
+```
+
 ## 📁 Repository Structure
 
 ```
